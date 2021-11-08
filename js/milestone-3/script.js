@@ -117,31 +117,40 @@ const boxContent = [
 ];
 
 const container = document.querySelector(".container");
-const valueSelection = parseInt(document.getElementById("selector").value);
+const valueSelection = document.getElementById("selector");
 console.log(valueSelection);
 
 init();
 
-function init(){
+valueSelection.addEventListener('change', (event) => {
+  let finalValue = event.target.value;
+	// console.log(prova);
+	init(finalValue);
 
-	if (valueSelection === 1){
-		createBox(boxContent);
-		console.log(createBox(boxContent));
-	} else if(valueSelection === 2){
-		const arrayAnimal = boxContent.filter((element) => element.type === 'animal');
-		createBox(arrayAnimal);
-		console.log(arrayAnimal);
-	}else if(valueSelection === 3){
-		const arrayVegetable = boxContent.filter((element) => element.type === 'vegetable');
-		createBox(arrayVegetable);
-		console.log(arrayVegetable);
-	}else{
-		const arrayUser = boxContent.filter((element) => element.type === 'user');
-		createBox(arrayUser);
-		console.log(arrayUser);
+	// console.log(event);
+});
+
+
+	function init(finalValue){
+
+		if (finalValue == 4){
+			const arrayUser = boxContent.filter((element) => element.type === 'user');
+			createBox(arrayUser);
+			console.log(arrayUser);
+		} else if(finalValue == 2){
+			const arrayAnimal = boxContent.filter((element) => element.type === 'animal');
+			createBox(arrayAnimal);
+			console.log(arrayAnimal);
+		}else if(finalValue == 3){
+			const arrayVegetable = boxContent.filter((element) => element.type === 'vegetable');
+			createBox(arrayVegetable);
+			console.log(arrayVegetable);
+		}else{
+			createBox(boxContent);
+			console.log(createBox(boxContent));
+		}
+
 	}
-
-}
 
 function createBox(array){
 	container.innerHTML = "";
