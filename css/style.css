@@ -31,6 +31,7 @@ nav, h3{
   width: 200px;
   height: 100px;
   float: left;
+  cursor: pointer;
 }
 
 i{
