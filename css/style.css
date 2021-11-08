@@ -1,0 +1,39 @@
+h1{
+  font-weight: 800;
+  line-height: 80px;
+  vertical-align: middle;
+}
+
+body{
+  background-color: #DDDDDD;
+}
+
+header{
+  background-color: white;
+}
+
+nav{
+  background-color: #29B1DD;
+  height: 100px;
+  width: 100%;
+}
+
+nav, h3{
+  display: inline-block;
+  line-height: 100px;
+  height: 100px;
+}
+
+.box{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px black;
+  width: 200px;
+  height: 100px;
+  float: left;
+}
+
+i{
+  font-size: 35px;
+  display: block;
+}
